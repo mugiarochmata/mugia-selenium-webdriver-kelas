@@ -1,0 +1,66 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="1" >
+    <test name="Search product with no result">
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="searching" value="No Product Found"></parameter>
+        <classes>
+            <class name="com.practice.selenium.SearchProductNoresult">
+                <methods>
+                    <include name="searchProduct"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Search product with result">
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="searching" value="Dress"></parameter>
+        <classes>
+            <class name="com.practice.selenium.SearchProductNoresult">
+                <methods>
+                    <include name="searchProductResult"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Sign in with invalid email address">
+        <parameter name="browser" value="firefox"></parameter>
+        <parameter name="emailaddrs" value="mugi.mugi@gmail.com"></parameter>
+        <parameter name="passwordnya" value="test123123"></parameter>
+        <classes>
+            <class name="com.practice.selenium.SignInWebsite">
+                <methods>
+                    <include name="signInvalid"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Sign in with invalid password">
+        <parameter name="browser" value="firefox"></parameter>
+        <parameter name="emailaddrs" value="mugi.gia@gmail.com"></parameter>
+        <parameter name="passwordnya" value="test123123123"></parameter>
+        <classes>
+            <class name="com.practice.selenium.SignInWebsite">
+                <methods>
+                    <include name="signInvalid"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Sign in with valid credentials">
+        <parameter name="browser" value="firefox"></parameter>
+        <parameter name="emailaddrs" value="mugi.gia@gmail.com"></parameter>
+        <parameter name="passwordnya" value="test123123"></parameter>
+        <classes>
+            <class name="com.practice.selenium.SignInWebsite">
+                <methods>
+                    <include name="signInvalid"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
